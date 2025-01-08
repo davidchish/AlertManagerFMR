@@ -1,0 +1,14 @@
+{
+  "RabbitMQListner": {
+    "Exchange": "Flight",
+    "Queue": "FlightQueu",
+    "HostName": "",
+    "RoutingKey": "*"
+  },
+  "RabbitMQTarget": {
+    "Exchange": "Flight",
+    "Queue": "FlightQueu",
+    "HostName": "localHost",
+    "RoutingKey": "*"
+  }
+}
