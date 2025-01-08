@@ -12,7 +12,7 @@ namespace RabbitMQ
         private Dictionary<string, RabbitMQSetting> _jsonRabbitSettingDictionery = new Dictionary<string, RabbitMQSetting>();
         private RabbitMQSetting rabbitMQSettingListner;
         private RabbitMQSetting rabbitMQSettingSender;
-        private string _RabbitConnfiguratiomPath = @"C:\david\source\repos\AlertManagerFMR\RabbitMQ\RabbitMqConfiguration.json";
+        private string _RabbitConnfiguratiomPath = @"RabbitMqConfiguration.json";
         private Task<IChannel> channelSender;
         private Task<IChannel> channelReciver;
 
