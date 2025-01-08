@@ -1,5 +1,4 @@
 ﻿
-using AlertManagerFMR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ namespace DbAdapter
 {
     public class ClientRuleContext : DbContext
     {
-        public DbSet<RuleInfo> Ruls { get; set; }
+        public DbSet<RuleInfo> Rules { get; set; }
 
         public ClientRuleContext()
         {

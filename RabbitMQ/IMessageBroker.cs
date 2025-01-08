@@ -8,7 +8,10 @@ namespace RabbitMQ
 {
     public interface IMessageBroker
     {
-        void SendMessage<T>(T message);
+        public Task SendMessageAsync<T>(T message);
+
+        public void ReciveMessage(byte[] message);
+
     }
 
 }

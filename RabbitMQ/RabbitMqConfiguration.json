@@ -1,7 +1,7 @@
 {
-  "RabbitMQListner": {
+  "RabbitMQListener": {
     "Exchange": "Flight",
-    "Queue": "FlightQueu",
+    "Queue": "FlightQueue",
     "HostName": "",
     "RoutingKey": "*"
   },
