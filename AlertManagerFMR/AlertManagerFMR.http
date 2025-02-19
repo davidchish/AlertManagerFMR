@@ -1,6 +1,6 @@
 @AlertManagerFMR_HostAddress = http://localhost:5143
 
-GET {{AlertManagerFMR_HostAddress}}/weatherforecast/
+GET {{AlertManagerFMR_HostAddress}}/airplane/
 Accept: application/json
 
 ###

@@ -10,7 +10,7 @@ namespace RabbitMQ
     {
         public Task SendMessageAsync<T>(T message);
 
-        public void ReciveMessage(byte[] message);
+        public void ReciveMessageasync(byte[] message);
 
     }
 

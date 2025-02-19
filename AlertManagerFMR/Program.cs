@@ -1,6 +1,7 @@
 using AlertManagerFMR.Controllers;
 using RabbitMQ;
 using DbAdapter;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<RabbitMqFactory>();
-builder.Services.AddSingleton<ClientRuleContext>();
+builder.Services.AddScoped<ImessageBroker,RabbitMqFactory>();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ClientRuleContext>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

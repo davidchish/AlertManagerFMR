@@ -1,4 +1,8 @@
 {
+  "RabbitMQServer": {
+    "HostName":"localHost" ,
+    "Password":"Aa12345678"
+  },
   "RabbitMQListener": {
     "Exchange": "Flight",
     "Queue": "FlightQueue",

@@ -12,7 +12,7 @@ namespace RabbitMQ
         private Dictionary<string, RabbitMQSetting> _jsonRabbitSettingDictionery = new Dictionary<string, RabbitMQSetting>();
         private RabbitMQSetting rabbitMQSettingListner;
         private RabbitMQSetting rabbitMQSettingSender;
-        private string _RabbitConnfiguratiomPath = @"RabbitMqConfiguration.json";
+        private string _RabbitConnfiguratiomPath = @"..//..//RabbitMqConfiguration.json";
         private Task<IChannel> channelSender;
         private Task<IChannel> channelReciver;
 
@@ -31,8 +31,7 @@ namespace RabbitMQ
             channelSender = connection.CreateChannelAsync();
             channelReciver = connection.CreateChannelAsync();
 
-            await channelReciver.Result.QueueDeclareAsync(queue: "hello", durable: false, exclusive: false, autoDelete: false,
-    arguments: null);
+            await channelReciver.Result.QueueDeclareAsync(queue:"", durable: true, exclusive: false, autoDelete: false,arguments: null);
 
             await channelSender.Result.ExchangeDeclareAsync(rabbitMQSettingSender.Exchange, ExchangeType.Direct);
         }
@@ -53,6 +52,11 @@ namespace RabbitMQ
                 SendMessageAsync(message);
                 return Task.CompletedTask;
             };
+        }
+
+        public void ReciveMessageasync(byte[] message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

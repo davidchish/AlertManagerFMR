@@ -11,19 +11,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="/RabbitMqConfiguration.json">
+    <Content Include="RabbitMqConfiguration.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="RabbitMqConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\InfoProperty\InfoProperty.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="RabbitMqConfiguration.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
